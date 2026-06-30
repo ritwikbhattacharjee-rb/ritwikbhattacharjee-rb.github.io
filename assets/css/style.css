@@ -1,6 +1,5 @@
 /* ==========================================================================
    Ritwik Bhattacharjee Portfolio
-   Refined CSS replacement — mobile-first, accessible, editorial portfolio style
    ========================================================================== */
 
 :root {
@@ -397,8 +396,6 @@ em {
   border-radius: var(--radius-sm);
   backdrop-filter: blur(0.75rem);
 }
-
-/* Optional portrait styles retained for alternate hero versions */
 
 .hero-portrait {
   display: flex;
@@ -806,5 +803,78 @@ em {
   body.is-ready [data-reveal].is-visible {
     opacity: 1;
     transform: none;
+  }
+}
+/* ==========================================================
+   Project Poster
+========================================================== */
+
+.project-poster{
+    margin:2.5rem 0;
+    text-align:center;
+}
+
+.project-poster img{
+    width:100%;
+    max-width:850px;
+    height:auto;
+    object-fit:contain;
+    display:block;
+    margin:0 auto;
+    border-radius:12px;
+    box-shadow:0 24px 60px rgba(0,0,0,.12);
+    border:1px solid #ddd;
+}
+
+.project-poster figcaption{
+    margin-top:1rem;
+    color:var(--color-muted);
+    font-size:.95rem;
+    text-align:center;
+}
+/* ==========================================================
+   Projects Page: JWAM Poster Feature
+   ========================================================== */
+
+.jwam-feature {
+  background: var(--color-surface);
+}
+
+.project-poster {
+  margin: 3rem 0 0;
+  text-align: center;
+}
+
+.project-poster img {
+  width: 100%;
+  max-width: 62rem;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin-inline: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.project-poster figcaption {
+  max-width: 42rem;
+  margin: 1rem auto 0;
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.compact-ledger {
+  margin-top: 2rem;
+}
+
+@media (min-width: 70rem) {
+  .project-poster {
+    margin-top: 4rem;
+  }
+
+  .project-poster img {
+    max-width: 70rem;
   }
 }
