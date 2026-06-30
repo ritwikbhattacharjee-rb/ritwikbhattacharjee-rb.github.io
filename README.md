@@ -1,1 +1,0 @@
-# ritwikbhattacharjee-rb.github.io
