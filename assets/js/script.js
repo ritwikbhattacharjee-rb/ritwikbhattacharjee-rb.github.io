@@ -1,0 +1,1 @@
+console.log('Portfolio v4 Batch 1 loaded');
