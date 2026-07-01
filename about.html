@@ -14,6 +14,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&amp;display=swap"
         rel="stylesheet">
 
+    <link rel="preload" as="image" href="assets/img/profile/ritwik-headshot.png">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/script.js" defer></script>
 </head>
@@ -40,14 +41,22 @@
     </header>
 
     <main id="main">
-        <section class="section page-hero about-hero" aria-labelledby="about-title">
-            <div class="container narrow" data-reveal>
-                <p class="eyebrow">About</p>
-                <h1 id="about-title">Strategic communications shaped by research, storytelling and public engagement.</h1>
-                <p class="lead">
-                    I help institutions communicate complex ideas with clarity, credibility and impact —
-                    connecting research, people and public audiences through thoughtful communications strategy.
-                </p>
+        <section class="section page-hero about-hero about-hero-with-photo" aria-labelledby="about-title">
+            <div class="container about-hero-grid">
+                <div data-reveal>
+                    <p class="eyebrow">About</p>
+                    <h1 id="about-title">Strategic communications shaped by research, storytelling and public engagement.</h1>
+                    <p class="lead">
+                        I help institutions communicate complex ideas with clarity, credibility and impact —
+                        connecting research, people and public audiences through thoughtful communications strategy.
+                    </p>
+                </div>
+
+                <figure class="about-headshot" data-reveal>
+                    <img src="assets/img/profile/ritwik-headshot.png"
+                        alt="Professional headshot of Ritwik Bhattacharjee"
+                        width="448" height="608" decoding="async">
+                </figure>
             </div>
         </section>
 
@@ -118,7 +127,45 @@
             </div>
         </section>
 
-        <section class="section section-muted" aria-labelledby="journey-title">
+        <section class="section section-muted" aria-labelledby="testimonials-title">
+            <div class="container">
+                <div class="section-heading" data-reveal>
+                    <p class="eyebrow">What Colleagues Say</p>
+                    <h2 id="testimonials-title">Trusted for judgment, adaptability and relationship-building.</h2>
+                </div>
+
+                <ul class="testimonial-grid" role="list">
+                    <li data-reveal>
+                        <blockquote>
+                            <p>
+                                “Ritwik has shown a remarkable ability to adapt and take on new work within the scope of
+                                the position. His adaptability and initiative are two of his strongest assets.”
+                            </p>
+                        </blockquote>
+                    </li>
+
+                    <li data-reveal>
+                        <blockquote>
+                            <p>
+                                “His work is accurate and thorough. I learned to trust his judgment on issues that range
+                                from promoting the two new minors in the unit to producing the monthly newsletter.”
+                            </p>
+                        </blockquote>
+                    </li>
+
+                    <li data-reveal>
+                        <blockquote>
+                            <p>
+                                “One of his strengths is his interpersonal and relationship-building skills. He is a
+                                well-respected member of the teams he works within.”
+                            </p>
+                        </blockquote>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section" aria-labelledby="journey-title">
             <div class="container">
                 <div class="section-heading" data-reveal>
                     <p class="eyebrow">Career Journey</p>
@@ -135,7 +182,7 @@
                     <li data-reveal>
                         <strong>Academic research and teaching</strong><br>
                         Developed expertise in political theory, critical Indigenous theory, democratic theory and
-                        decolonization as a PhD Candidate (ABD) in Interdisciplinary Studies at UBC.
+                        decolonization as a PhD Candidate in Interdisciplinary Studies, currently ABD, at UBC.
                     </li>
 
                     <li data-reveal>
@@ -159,7 +206,7 @@
             </div>
         </section>
 
-        <section class="section" aria-labelledby="credentials-title">
+        <section class="section section-muted" aria-labelledby="credentials-title">
             <div class="container">
                 <div class="section-heading" data-reveal>
                     <p class="eyebrow">Credentials</p>
@@ -170,7 +217,7 @@
                     <div data-reveal>
                         <dt>Education</dt>
                         <dd>
-                            PhD Candidate (ABD), Interdisciplinary Studies, University of British Columbia;
+                            PhD Candidate in Interdisciplinary Studies, currently ABD, University of British Columbia;
                             MA International Relations, Middlesex University; BA (Hons) Political Science,
                             Jadavpur University.
                         </dd>
@@ -205,7 +252,7 @@
             </div>
         </section>
 
-        <section class="section section-muted" aria-labelledby="about-cta-title">
+        <section class="section" aria-labelledby="about-cta-title">
             <div class="container narrow" data-reveal>
                 <p class="eyebrow">Next</p>
                 <h2 id="about-cta-title">Explore the work behind the profile.</h2>
@@ -218,6 +265,7 @@
                     <a class="button button-primary" href="projects.html">View Portfolio</a>
                     <a class="button button-secondary" href="writing.html">Read Writing</a>
                     <a class="button button-secondary" href="resume.html">View Resume</a>
+                    <a class="button button-secondary" href="https://www.linkedin.com/in/rb85/" target="_blank" rel="noopener">LinkedIn</a>
                 </div>
             </div>
         </section>
@@ -235,6 +283,8 @@
                 <a href="writing.html">Writing</a>
                 <span aria-hidden="true"> · </span>
                 <a href="projects.html">Portfolio</a>
+                <span aria-hidden="true"> · </span>
+                <a href="https://www.linkedin.com/in/rb85/" target="_blank" rel="noopener">LinkedIn</a>
             </p>
             <p>&copy; 2026 Ritwik Bhattacharjee</p>
         </div>
