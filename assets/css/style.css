@@ -373,3 +373,23 @@ h3 {
     font-size: 2.65rem
   }
 }
+
+
+/* v8.5 simplified primary navigation */
+.site-nav ul {
+  gap: clamp(0.85rem, 1.5vw, 1.35rem);
+}
+
+.site-nav a {
+  white-space: nowrap;
+}
+
+@media (max-width: 860px) {
+  .nav-shell {
+    align-items: flex-start;
+  }
+
+  .site-nav ul {
+    justify-content: flex-start;
+  }
+}
