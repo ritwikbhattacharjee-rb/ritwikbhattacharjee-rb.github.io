@@ -2253,4 +2253,265 @@ em {
     gap: 2.25rem;
   }
 }
+/* ==========================================================
+   Version 11 Global Polish: Typography, Spacing & Image Treatments
+   Paste at the VERY BOTTOM of assets/css/style.css
+   ========================================================== */
 
+/* Stronger editorial rhythm */
+:root {
+  --space-section-sm: 4.5rem;
+  --space-section-md: 6.5rem;
+  --space-section-lg: 8rem;
+  --measure-wide: 68rem;
+  --measure-copy: 46rem;
+}
+
+body {
+  letter-spacing: -0.005em;
+}
+
+.section {
+  padding-block: var(--space-section-sm);
+}
+
+.section-heading {
+  max-width: 52rem;
+  margin-bottom: 2.75rem;
+}
+
+.section-heading p:not(.eyebrow),
+.lead {
+  max-width: var(--measure-copy);
+}
+
+/* Better heading scale and readability */
+h1 {
+  letter-spacing: -0.055em;
+  text-wrap: balance;
+}
+
+h2 {
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+}
+
+h3 {
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+p,
+li,
+dd {
+  text-wrap: pretty;
+}
+
+/* More polished page hero treatment */
+.page-hero {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 85% 10%, rgba(15, 94, 140, 0.08), transparent 28rem),
+    var(--color-surface);
+}
+
+.page-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Editorial image system */
+figure {
+  margin: 0;
+}
+
+.hero-media,
+.case-feature-image,
+.project-poster,
+.about-headshot,
+.screenshot-grid figure,
+.impact-evidence-image {
+  overflow: hidden;
+}
+
+.hero-media img,
+.case-feature-image img,
+.project-poster img,
+.about-headshot img,
+.screenshot-grid img,
+.impact-evidence-image img {
+  transition: transform 700ms cubic-bezier(0.2, 0.8, 0.2, 1), filter 700ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.hero-media:hover img,
+.case-feature-image:hover img,
+.project-poster:hover img,
+.about-headshot:hover img,
+.screenshot-grid figure:hover img,
+.impact-evidence-image:hover img {
+  transform: scale(1.015);
+  filter: saturate(0.96) contrast(1.04);
+}
+
+.case-feature-image,
+.project-poster,
+.impact-evidence-image {
+  margin-block: 2.5rem;
+}
+
+.case-feature-image img,
+.project-poster img,
+.impact-evidence-image img,
+.screenshot-grid img,
+.about-headshot img {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.case-feature-image img,
+.project-poster img {
+  box-shadow: var(--shadow-md);
+}
+
+.case-feature-image figcaption,
+.project-poster figcaption,
+.screenshot-grid figcaption,
+.impact-evidence-image figcaption,
+.hero-media figcaption {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+/* Better card rhythm */
+.card,
+.card-large,
+.timeline-card,
+.milestone-card,
+.expert-matrix article,
+.strategy-map article,
+.process-steps li,
+.testimonial-grid li,
+.home-feature-grid a {
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition), background-color var(--transition);
+}
+
+.card-large,
+.timeline-card,
+.milestone-card,
+.expert-matrix article,
+.strategy-map article,
+.process-steps li,
+.testimonial-grid li,
+.home-feature-grid a {
+  border-color: rgba(222, 219, 213, 0.9);
+}
+
+/* Lists and ledgers */
+.impact-ledger div,
+.discipline-grid li,
+.writing-list > li,
+.resume-role {
+  padding-block: 1.35rem;
+}
+
+/* Better buttons */
+.button {
+  letter-spacing: -0.01em;
+}
+
+.button-primary {
+  box-shadow: 0 0.8rem 1.8rem rgba(17, 17, 17, 0.12);
+}
+
+/* Improve screenshots and proof galleries */
+.screenshot-grid {
+  gap: 1.25rem;
+}
+
+.screenshot-grid figure {
+  padding: 0.75rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.screenshot-grid img {
+  box-shadow: none;
+}
+
+/* More graceful desktop scale */
+@media (min-width: 48rem) {
+  .section {
+    padding-block: var(--space-section-md);
+  }
+
+  .section-heading {
+    margin-bottom: 3.25rem;
+  }
+
+  .impact-ledger div,
+  .discipline-grid li,
+  .writing-list > li,
+  .resume-role {
+    padding-block: 1.75rem;
+  }
+
+  .screenshot-grid {
+    gap: 1.6rem;
+  }
+}
+
+@media (min-width: 70rem) {
+  .section {
+    padding-block: var(--space-section-lg);
+  }
+
+  .page-hero {
+    padding-block: 8.5rem;
+  }
+
+  .hero-copy,
+  .editorial-copy,
+  .flagship-story,
+  .resume-summary-copy,
+  .about-copy,
+  .consulting-copy {
+    max-width: var(--measure-wide);
+  }
+
+  .lead {
+    font-size: 1.35rem;
+    line-height: 1.55;
+  }
+
+  .case-feature-image,
+  .project-poster,
+  .impact-evidence-image {
+    margin-block: 3.5rem;
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .hero-media img,
+  .case-feature-image img,
+  .project-poster img,
+  .about-headshot img,
+  .screenshot-grid img,
+  .impact-evidence-image img {
+    transition: none;
+  }
+
+  .hero-media:hover img,
+  .case-feature-image:hover img,
+  .project-poster:hover img,
+  .about-headshot:hover img,
+  .screenshot-grid figure:hover img,
+  .impact-evidence-image:hover img {
+    transform: none;
+  }
+}
