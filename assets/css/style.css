@@ -2342,3 +2342,32 @@ main > section:not(:first-child) {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+/* ==========================================================
+   Phase 1 Navigation Fix
+   Paste at bottom of assets/css/style.css
+   ========================================================== */
+
+.site-nav ul {
+  flex-wrap: wrap;
+}
+
+.site-nav a[aria-current="page"] {
+  color: var(--color-ink);
+  background: var(--color-surface-soft);
+  border-radius: 999px;
+}
+
+@media (max-width: 64rem) {
+  .nav-shell {
+    align-items: flex-start;
+  }
+
+  .site-nav ul {
+    justify-content: flex-start;
+    row-gap: 0.35rem;
+  }
+
+  .site-nav a {
+    font-size: 0.82rem;
+  }
+}
