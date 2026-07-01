@@ -1,5 +1,6 @@
 /* ==========================================================================
    Ritwik Bhattacharjee Portfolio
+   Refined CSS replacement â€” mobile-first, accessible, editorial portfolio style
    ========================================================================== */
 
 :root {
@@ -397,6 +398,8 @@ em {
   backdrop-filter: blur(0.75rem);
 }
 
+/* Optional portrait styles retained for alternate hero versions */
+
 .hero-portrait {
   display: flex;
   align-items: center;
@@ -506,7 +509,7 @@ em {
   max-width: 58rem;
 }
 
-.flagship-story>p {
+.flagship-story > p {
   color: var(--color-ink);
   font-size: 1.35rem;
   line-height: 1.55;
@@ -775,7 +778,7 @@ em {
   }
 
   .editorial-copy p,
-  .flagship-story>p {
+  .flagship-story > p {
     font-size: 1.45rem;
   }
 
@@ -789,7 +792,6 @@ em {
 }
 
 @media (prefers-reduced-motion: reduce) {
-
   *,
   *::before,
   *::after {
@@ -805,35 +807,13 @@ em {
     transform: none;
   }
 }
-/* ==========================================================
-   Project Poster
-========================================================== */
 
-.project-poster{
-    margin:2.5rem 0;
-    text-align:center;
-}
 
-.project-poster img{
-    width:100%;
-    max-width:850px;
-    height:auto;
-    object-fit:contain;
-    display:block;
-    margin:0 auto;
-    border-radius:12px;
-    box-shadow:0 24px 60px rgba(0,0,0,.12);
-    border:1px solid #ddd;
-}
 
-.project-poster figcaption{
-    margin-top:1rem;
-    color:var(--color-muted);
-    font-size:.95rem;
-    text-align:center;
-}
+
 /* ==========================================================
    Projects Page: JWAM Poster Feature
+   Add this to the bottom of assets/css/style.css
    ========================================================== */
 
 .jwam-feature {
@@ -878,6 +858,10 @@ em {
     max-width: 70rem;
   }
 }
+
+
+
+
 /* ==========================================================
    Writing Page Additions
    Add to bottom of assets/css/style.css
@@ -934,699 +918,10 @@ em {
     padding-block: 2.35rem;
   }
 }
-/* ==========================================================
-   Arts Perspectives on AI Case Study Additions
-   Add to bottom of assets/css/style.css
-   ========================================================== */
 
-.case-hero h1 {
-  max-width: 11ch;
-}
 
-.case-summary {
-  display: grid;
-  gap: 2rem;
-  margin-bottom: 3rem;
-}
 
-.case-summary > p {
-  max-width: 58rem;
-  color: var(--color-ink);
-  font-size: 1.25rem;
-  line-height: 1.6;
-}
 
-.case-stats {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0;
-  margin: 0;
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
-}
-
-.case-stats div {
-  padding: 1.25rem 0;
-  border-bottom: 1px solid var(--color-border);
-}
-
-.case-stats div:last-child {
-  border-bottom: 0;
-}
-
-.case-stats dt {
-  color: var(--color-ink);
-  font-size: 2rem;
-  line-height: 1;
-  font-weight: 800;
-}
-
-.case-stats dd {
-  margin: 0.4rem 0 0;
-  color: var(--color-muted);
-}
-
-.case-article-list h3 {
-  max-width: 40ch;
-}
-
-@media (min-width: 48rem) {
-  .case-summary {
-    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
-    align-items: start;
-  }
-
-  .case-stats {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .case-stats div {
-    padding-right: 1rem;
-    border-right: 1px solid var(--color-border);
-    border-bottom: 0;
-  }
-
-  .case-stats div:last-child {
-    border-right: 0;
-  }
-}
-
-@media (min-width: 70rem) {
-  .case-summary > p {
-    font-size: 1.45rem;
-  }
-
-  .case-stats dt {
-    font-size: 2.4rem;
-  }
-}
-/* ==========================================================
-   Arts Perspectives on AI Case Study Visual Additions
-   Add to bottom of assets/css/style.css
-   ========================================================== */
-
-.case-hero h1 {
-  max-width: 11ch;
-}
-
-.case-summary {
-  display: grid;
-  gap: 2rem;
-  margin-bottom: 3rem;
-}
-
-.case-summary > p {
-  max-width: 58rem;
-  color: var(--color-ink);
-  font-size: 1.25rem;
-  line-height: 1.6;
-}
-
-.case-stats {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0;
-  margin: 0;
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
-}
-
-.case-stats div {
-  padding: 1.25rem 0;
-  border-bottom: 1px solid var(--color-border);
-}
-
-.case-stats div:last-child {
-  border-bottom: 0;
-}
-
-.case-stats dt {
-  color: var(--color-ink);
-  font-size: 2rem;
-  line-height: 1;
-  font-weight: 800;
-}
-
-.case-stats dd {
-  margin: 0.4rem 0 0;
-  color: var(--color-muted);
-}
-
-.case-feature-image {
-  margin: 2rem 0 3rem;
-}
-
-.case-feature-image img {
-  width: 100%;
-  height: auto;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-md);
-}
-
-.case-feature-image figcaption,
-.screenshot-grid figcaption {
-  margin-top: 0.8rem;
-  color: var(--color-muted);
-  font-size: 0.92rem;
-  line-height: 1.45;
-}
-
-.screenshot-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-}
-
-.screenshot-grid figure {
-  margin: 0;
-}
-
-.screenshot-grid img {
-  width: 100%;
-  height: auto;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
-}
-
-.case-article-list h3 {
-  max-width: 40ch;
-}
-
-@media (min-width: 48rem) {
-  .case-summary {
-    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
-    align-items: start;
-  }
-
-  .case-stats {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .case-stats div {
-    padding-right: 1rem;
-    border-right: 1px solid var(--color-border);
-    border-bottom: 0;
-  }
-
-  .case-stats div:last-child {
-    border-right: 0;
-  }
-
-  .screenshot-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-  }
-}
-
-@media (min-width: 70rem) {
-  .case-summary > p {
-    font-size: 1.45rem;
-  }
-
-  .case-stats dt {
-    font-size: 2.4rem;
-  }
-
-  .case-feature-image {
-    margin-block: 3rem 4rem;
-  }
-}
-/* ==========================================================
-   About Page Additions
-   Add to bottom of assets/css/style.css
-   ========================================================== */
-
-.about-hero h1 {
-  max-width: 13ch;
-}
-
-.about-layout {
-  display: grid;
-  gap: 2rem;
-}
-
-.about-copy {
-  max-width: 58rem;
-}
-
-.about-copy p {
-  color: var(--color-ink);
-  font-size: 1.18rem;
-  line-height: 1.7;
-}
-
-.about-principles {
-  display: grid;
-  gap: 0;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  border-top: 1px solid var(--color-border);
-}
-
-.about-principles li {
-  padding: 1.6rem 0;
-  border-bottom: 1px solid var(--color-border);
-}
-
-.about-principles h3 {
-  margin-bottom: 0.5rem;
-}
-
-.about-principles p {
-  max-width: 44rem;
-  color: var(--color-muted);
-}
-
-.about-timeline li {
-  line-height: 1.65;
-}
-
-@media (min-width: 48rem) {
-  .about-layout {
-    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
-    align-items: start;
-  }
-
-  .about-principles {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    border-top: 0;
-  }
-
-  .about-principles li {
-    padding: 0;
-    border-bottom: 0;
-  }
-}
-
-@media (min-width: 70rem) {
-  .about-copy p {
-    font-size: 1.35rem;
-  }
-}
-/* ==========================================================
-   About Page Additions with Headshot and Testimonials
-   Add to bottom of assets/css/style.css
-   ========================================================== */
-
-.about-hero h1 {
-  max-width: 13ch;
-}
-
-.about-hero-grid {
-  display: grid;
-  gap: 2.5rem;
-  align-items: center;
-}
-
-.about-headshot {
-  margin: 0;
-  justify-self: start;
-  max-width: 22rem;
-}
-
-.about-headshot img {
-  width: 100%;
-  height: auto;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-md);
-}
-
-.about-layout {
-  display: grid;
-  gap: 2rem;
-}
-
-.about-copy {
-  max-width: 58rem;
-}
-
-.about-copy p {
-  color: var(--color-ink);
-  font-size: 1.18rem;
-  line-height: 1.7;
-}
-
-.about-principles {
-  display: grid;
-  gap: 0;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  border-top: 1px solid var(--color-border);
-}
-
-.about-principles li {
-  padding: 1.6rem 0;
-  border-bottom: 1px solid var(--color-border);
-}
-
-.about-principles h3 {
-  margin-bottom: 0.5rem;
-}
-
-.about-principles p {
-  max-width: 44rem;
-  color: var(--color-muted);
-}
-
-.testimonial-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.testimonial-grid li {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
-}
-
-.testimonial-grid blockquote {
-  margin: 0;
-  padding: 1.4rem;
-}
-
-.testimonial-grid p {
-  margin: 0;
-  color: var(--color-ink);
-  font-size: 1.05rem;
-  line-height: 1.6;
-}
-
-.about-timeline li {
-  line-height: 1.65;
-}
-
-@media (min-width: 48rem) {
-  .about-hero-grid {
-    grid-template-columns: minmax(0, 1.25fr) minmax(16rem, 0.75fr);
-  }
-
-  .about-headshot {
-    justify-self: end;
-  }
-
-  .about-layout {
-    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
-    align-items: start;
-  }
-
-  .about-principles {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    border-top: 0;
-  }
-
-  .about-principles li {
-    padding: 0;
-    border-bottom: 0;
-  }
-
-  .testimonial-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (min-width: 70rem) {
-  .about-headshot {
-    max-width: 25rem;
-  }
-
-  .about-copy p {
-    font-size: 1.35rem;
-  }
-
-  .testimonial-grid p {
-    font-size: 1.12rem;
-  }
-}
-/* ==========================================================
-   Resume Page Additions
-   Add to bottom of assets/css/style.css
-   ========================================================== */
-
-.resume-hero h1 {
-  max-width: 13ch;
-}
-
-.resume-summary-grid {
-  display: grid;
-  gap: 2rem;
-}
-
-.resume-summary-copy {
-  max-width: 58rem;
-}
-
-.resume-summary-copy p {
-  color: var(--color-ink);
-  font-size: 1.18rem;
-  line-height: 1.7;
-}
-
-.resume-metrics {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0;
-  margin: 0;
-  border-top: 1px solid var(--color-border);
-}
-
-.resume-metrics div {
-  padding: 1.35rem 0;
-  border-bottom: 1px solid var(--color-border);
-}
-
-.resume-metrics dt {
-  color: var(--color-ink);
-  font-size: 2rem;
-  line-height: 1;
-  font-weight: 800;
-}
-
-.resume-metrics dd {
-  margin: 0.45rem 0 0;
-  color: var(--color-muted);
-}
-
-.resume-role {
-  padding: 2rem 0;
-  border-top: 1px solid var(--color-border);
-}
-
-.resume-role:last-child {
-  border-bottom: 1px solid var(--color-border);
-}
-
-.resume-role-header {
-  margin-bottom: 1rem;
-}
-
-.resume-role-header h3 {
-  margin-bottom: 0.35rem;
-}
-
-.resume-role-header p {
-  color: var(--color-muted);
-  font-weight: 700;
-}
-
-.resume-role ul {
-  max-width: 58rem;
-  margin: 0;
-  padding-left: 1.2rem;
-}
-
-.resume-role li {
-  margin-bottom: 0.8rem;
-}
-
-@media (min-width: 48rem) {
-  .resume-summary-grid {
-    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
-    align-items: start;
-  }
-
-  .resume-metrics {
-    grid-template-columns: repeat(3, 1fr);
-    border-left: 0;
-  }
-
-  .resume-metrics div {
-    padding-right: 1.25rem;
-    border-right: 1px solid var(--color-border);
-  }
-
-  .resume-metrics div:nth-child(3n) {
-    border-right: 0;
-  }
-
-  .resume-role {
-    display: grid;
-    grid-template-columns: minmax(14rem, 0.5fr) minmax(0, 1fr);
-    gap: 3rem;
-  }
-}
-
-@media (min-width: 70rem) {
-  .resume-summary-copy p {
-    font-size: 1.35rem;
-  }
-
-  .resume-metrics dt {
-    font-size: 2.4rem;
-  }
-}
-/* ==========================================================
-   AI Case Study 2.0 Consulting-Style Additions
-   Add to bottom of assets/css/style.css
-   ========================================================== */
-
-.consulting-hero h1 {
-  max-width: 10ch;
-}
-
-.consulting-hero-grid {
-  display: grid;
-  gap: 2.5rem;
-  align-items: start;
-}
-
-.case-brief {
-  padding: 1.5rem;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
-}
-
-.case-brief dl {
-  display: grid;
-  gap: 1rem;
-  margin: 0;
-}
-
-.case-brief dt {
-  color: var(--color-ink);
-  font-weight: 800;
-}
-
-.case-brief dd {
-  margin: 0.2rem 0 0;
-  color: var(--color-muted);
-}
-
-.consulting-answer {
-  max-width: 66rem;
-  margin-bottom: 3rem;
-}
-
-.consulting-answer h2 {
-  max-width: 16ch;
-}
-
-.consulting-answer p {
-  max-width: 62rem;
-  color: var(--color-ink);
-  font-size: 1.25rem;
-  line-height: 1.6;
-}
-
-.consulting-stats {
-  margin-top: 2rem;
-}
-
-.consulting-section-grid {
-  display: grid;
-  gap: 2rem;
-}
-
-.consulting-copy {
-  max-width: 58rem;
-}
-
-.consulting-copy p {
-  color: var(--color-ink);
-  font-size: 1.18rem;
-  line-height: 1.7;
-}
-
-.consulting-bullets {
-  margin: 0;
-  padding-left: 1.2rem;
-  color: var(--color-ink);
-  font-size: 1.08rem;
-}
-
-.consulting-bullets li {
-  margin-bottom: 1rem;
-}
-
-.strategy-map {
-  display: grid;
-  gap: 1rem;
-}
-
-.strategy-map article {
-  position: relative;
-  padding: 1.5rem;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
-}
-
-.strategy-map span {
-  display: inline-flex;
-  width: 2rem;
-  height: 2rem;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1rem;
-  color: var(--color-surface);
-  background: var(--color-ink);
-  border-radius: 999px;
-  font-weight: 800;
-}
-
-.strategy-map p {
-  color: var(--color-muted);
-}
-
-@media (min-width: 48rem) {
-  .consulting-hero-grid,
-  .consulting-section-grid {
-    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  }
-
-  .strategy-map {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 70rem) {
-  .consulting-answer p,
-  .consulting-copy p {
-    font-size: 1.35rem;
-  }
-
-  .consulting-bullets {
-    font-size: 1.18rem;
-  }
-
-  .strategy-map {
-    gap: 1.5rem;
-  }
-}
 /* ==========================================================
    AI Case Study Version 7 Additions
    Add to bottom of assets/css/style.css
@@ -1800,10 +1095,189 @@ em {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+
+
+
 /* ==========================================================
-   Interactive Career Timeline Element
+   About Page Additions with Headshot and Testimonials
    Add to bottom of assets/css/style.css
    ========================================================== */
+
+.about-hero h1 {
+  max-width: 13ch;
+}
+
+.about-hero-grid {
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.about-headshot {
+  margin: 0;
+  justify-self: start;
+  max-width: 22rem;
+}
+
+.about-headshot img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.about-layout {
+  display: grid;
+  gap: 2rem;
+}
+
+.about-copy {
+  max-width: 58rem;
+}
+
+.about-copy p {
+  color: var(--color-ink);
+  font-size: 1.18rem;
+  line-height: 1.7;
+}
+
+.about-principles {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--color-border);
+}
+
+.about-principles li {
+  padding: 1.6rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.about-principles h3 {
+  margin-bottom: 0.5rem;
+}
+
+.about-principles p {
+  max-width: 44rem;
+  color: var(--color-muted);
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.testimonial-grid li {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.testimonial-grid blockquote {
+  margin: 0;
+  padding: 1.4rem;
+}
+
+.testimonial-grid p {
+  margin: 0;
+  color: var(--color-ink);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.about-timeline li {
+  line-height: 1.65;
+}
+
+@media (min-width: 48rem) {
+  .about-hero-grid {
+    grid-template-columns: minmax(0, 1.25fr) minmax(16rem, 0.75fr);
+  }
+
+  .about-headshot {
+    justify-self: end;
+  }
+
+  .about-layout {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    align-items: start;
+  }
+
+  .about-principles {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    border-top: 0;
+  }
+
+  .about-principles li {
+    padding: 0;
+    border-bottom: 0;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 70rem) {
+  .about-headshot {
+    max-width: 25rem;
+  }
+
+  .about-copy p {
+    font-size: 1.35rem;
+  }
+
+  .testimonial-grid p {
+    font-size: 1.12rem;
+  }
+}
+
+
+
+
+/* ==========================================================
+   Resume Page: Download Element and Interactive Timeline
+   Paste at the very bottom of assets/css/style.css
+   ========================================================== */
+
+.resume-download-section {
+  padding-block: 3rem;
+  background: var(--color-surface);
+}
+
+.resume-download-card {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+  padding-block: 2rem;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.resume-download-card h2 {
+  margin-bottom: 0.6rem;
+}
+
+.resume-download-card p {
+  max-width: 42rem;
+  color: var(--color-muted);
+}
+
+.resume-download-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
 
 .interactive-timeline {
   position: relative;
@@ -1854,6 +1328,14 @@ em {
 }
 
 @media (min-width: 48rem) {
+  .resume-download-card {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .resume-download-actions {
+    justify-content: flex-end;
+  }
+
   .interactive-timeline {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1864,49 +1346,10 @@ em {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-/* ==========================================================
-   Resume Download Element
-   Add to bottom of assets/css/style.css
-   ========================================================== */
 
-.resume-download-section {
-  padding-block: 3rem;
-  background: var(--color-surface);
-}
 
-.resume-download-card {
-  display: grid;
-  gap: 1.5rem;
-  align-items: center;
-  padding-block: 2rem;
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
-}
 
-.resume-download-card h2 {
-  margin-bottom: 0.6rem;
-}
 
-.resume-download-card p {
-  max-width: 42rem;
-  color: var(--color-muted);
-}
-
-.resume-download-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.85rem;
-}
-
-@media (min-width: 48rem) {
-  .resume-download-card {
-    grid-template-columns: minmax(0, 1fr) auto;
-  }
-
-  .resume-download-actions {
-    justify-content: flex-end;
-  }
-}
 /* ==========================================================
    Polished Homepage Additions
    Paste at bottom of assets/css/style.css
@@ -2056,6 +1499,10 @@ em {
     font-size: 2.7rem;
   }
 }
+
+
+
+
 /* ==========================================================
    Fully Interactive Career Timeline
    Paste at bottom of assets/css/style.css
@@ -2253,6 +1700,10 @@ em {
     gap: 2.25rem;
   }
 }
+
+
+
+
 /* ==========================================================
    Version 11 Global Polish: Typography, Spacing & Image Treatments
    Paste at the VERY BOTTOM of assets/css/style.css
@@ -2513,5 +1964,253 @@ figure {
   .screenshot-grid figure:hover img,
   .impact-evidence-image:hover img {
     transform: none;
+  }
+}
+
+
+
+
+/* ==========================================================
+   Version 12 SEO, Accessibility & Performance Polish
+   Paste at the VERY BOTTOM of assets/css/style.css
+   ========================================================== */
+
+/* Strong visible focus for keyboard users */
+:where(a, button, [tabindex]):focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 4px;
+  border-radius: 0.35rem;
+}
+
+/* Better skip-link behavior */
+.skip-link {
+  z-index: 9999;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* Prevent layout shift on media */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* More accessible link affordance in body copy */
+p a,
+li a,
+dd a {
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.2em;
+}
+
+/* Avoid hidden anchor targets under sticky nav */
+[id] {
+  scroll-margin-top: 7rem;
+}
+
+/* Improve tap targets */
+.site-nav a,
+.button,
+.text-link {
+  min-height: 44px;
+  align-items: center;
+}
+
+/* Performance: content visibility for long below-fold sections */
+main > section:not(:first-child) {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 800px;
+}
+
+/* Keep critical interactive sections fully available */
+.hero,
+.page-hero,
+.site-header,
+.site-footer {
+  content-visibility: visible;
+}
+
+/* Accessible text selection */
+::selection {
+  color: var(--color-surface);
+  background: var(--color-ink);
+}
+
+/* Print-friendly resume/portfolio */
+@media print {
+  .site-header,
+  .site-footer,
+  .button-row,
+  .timeline-nav,
+  .skip-link {
+    display: none !important;
+  }
+
+  body {
+    color: #000;
+    background: #fff;
+    font-size: 11pt;
+    line-height: 1.45;
+  }
+
+  .section {
+    padding-block: 1rem !important;
+  }
+
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  .card,
+  .card-large,
+  .timeline-card,
+  .milestone-card,
+  .resume-role,
+  .impact-ledger div {
+    box-shadow: none !important;
+    border-color: #aaa !important;
+    break-inside: avoid;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+
+
+
+/* ==========================================================
+   Version 12 SEO, Accessibility & Performance Polish
+   Paste at the VERY BOTTOM of assets/css/style.css
+   ========================================================== */
+
+/* Strong visible focus for keyboard users */
+:where(a, button, [tabindex]):focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 4px;
+  border-radius: 0.35rem;
+}
+
+/* Better skip-link behavior */
+.skip-link {
+  z-index: 9999;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* Prevent layout shift on media */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* More accessible link affordance in body copy */
+p a,
+li a,
+dd a {
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.2em;
+}
+
+/* Avoid hidden anchor targets under sticky nav */
+[id] {
+  scroll-margin-top: 7rem;
+}
+
+/* Improve tap targets */
+.site-nav a,
+.button,
+.text-link {
+  min-height: 44px;
+  align-items: center;
+}
+
+/* Performance: content visibility for long below-fold sections */
+main > section:not(:first-child) {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 800px;
+}
+
+/* Keep critical interactive sections fully available */
+.hero,
+.page-hero,
+.site-header,
+.site-footer {
+  content-visibility: visible;
+}
+
+/* Accessible text selection */
+::selection {
+  color: var(--color-surface);
+  background: var(--color-ink);
+}
+
+/* Print-friendly resume/portfolio */
+@media print {
+  .site-header,
+  .site-footer,
+  .button-row,
+  .timeline-nav,
+  .skip-link {
+    display: none !important;
+  }
+
+  body {
+    color: #000;
+    background: #fff;
+    font-size: 11pt;
+    line-height: 1.45;
+  }
+
+  .section {
+    padding-block: 1rem !important;
+  }
+
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  .card,
+  .card-large,
+  .timeline-card,
+  .milestone-card,
+  .resume-role,
+  .impact-ledger div {
+    box-shadow: none !important;
+    border-color: #aaa !important;
+    break-inside: avoid;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }
