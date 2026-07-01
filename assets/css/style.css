@@ -2371,3 +2371,85 @@ main > section:not(:first-child) {
     font-size: 0.82rem;
   }
 }
+/* ==========================================================
+   Phase 2 Expansion: Strategy Page, Impact Dashboard, Nav
+   Paste at the bottom of assets/css/style.css
+   ========================================================== */
+
+.phase2-strategy-grid,
+.phase2-dashboard {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.phase2-strategy-grid article,
+.phase2-dashboard article {
+  padding: 1.5rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.phase2-strategy-grid article:hover,
+.phase2-dashboard article:hover {
+  transform: translateY(-0.2rem);
+  border-color: rgba(17, 17, 17, 0.3);
+  box-shadow: var(--shadow-md);
+}
+
+.phase2-strategy-grid span {
+  display: inline-block;
+  margin-bottom: 0.9rem;
+  color: var(--color-accent-strong);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+
+.phase2-dashboard strong {
+  display: block;
+  margin-bottom: 0.65rem;
+  color: var(--color-ink);
+  font-size: clamp(2.4rem, 6vw, 4.8rem);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.phase2-dashboard span {
+  display: block;
+  color: var(--color-muted);
+  font-weight: 800;
+}
+
+.phase2-home-grid {
+  grid-template-columns: 1fr;
+}
+
+.site-nav ul {
+  flex-wrap: wrap;
+}
+
+@media (min-width: 48rem) {
+  .phase2-strategy-grid,
+  .phase2-dashboard,
+  .phase2-home-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 70rem) {
+  .phase2-strategy-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .phase2-dashboard {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .phase2-home-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
