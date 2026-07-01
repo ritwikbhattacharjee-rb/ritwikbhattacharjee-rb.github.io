@@ -2453,3 +2453,88 @@ main > section:not(:first-child) {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+/* ==========================================================
+   Phase 3 Expansion: Contact, Recognition, Polish, Dark Mode
+   Paste at the bottom of assets/css/style.css
+   ========================================================== */
+
+.phase3-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.phase3-contact-card {
+  padding: 1.5rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.phase3-contact-card h2 {
+  margin-bottom: 0.75rem;
+}
+
+.phase3-contact-card p {
+  color: var(--color-muted);
+}
+
+.back-to-top {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 20;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(0.5rem);
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.theme-dark {
+  --color-bg: #101214;
+  --color-surface: #171a1d;
+  --color-surface-soft: #20252a;
+  --color-ink: #f5f5f2;
+  --color-text: #e6e2dc;
+  --color-muted: #b8b1a8;
+  --color-border: #33383d;
+}
+
+.theme-dark body,
+.theme-dark .site-header {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.theme-dark .card,
+.theme-dark .phase3-contact-card,
+.theme-dark .phase2-dashboard article,
+.theme-dark .phase2-strategy-grid article,
+.theme-dark .phase1-feature-grid > li,
+.theme-dark .phase1-masonry > article,
+.theme-dark .phase1-gallery > article,
+.theme-dark .home-impact-panel,
+.theme-dark .case-brief,
+.theme-dark .milestone-card,
+.theme-dark .timeline-card {
+  background: var(--color-surface);
+  border-color: var(--color-border);
+}
+
+.theme-dark .button-primary {
+  background: var(--color-ink);
+  color: #111;
+}
+
+@media (min-width: 48rem) {
+  .phase3-contact-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
