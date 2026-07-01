@@ -1020,3 +1020,211 @@ em {
     font-size: 2.4rem;
   }
 }
+/* ==========================================================
+   Arts Perspectives on AI Case Study Visual Additions
+   Add to bottom of assets/css/style.css
+   ========================================================== */
+
+.case-hero h1 {
+  max-width: 11ch;
+}
+
+.case-summary {
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.case-summary > p {
+  max-width: 58rem;
+  color: var(--color-ink);
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+.case-stats {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin: 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.case-stats div {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.case-stats div:last-child {
+  border-bottom: 0;
+}
+
+.case-stats dt {
+  color: var(--color-ink);
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.case-stats dd {
+  margin: 0.4rem 0 0;
+  color: var(--color-muted);
+}
+
+.case-feature-image {
+  margin: 2rem 0 3rem;
+}
+
+.case-feature-image img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.case-feature-image figcaption,
+.screenshot-grid figcaption {
+  margin-top: 0.8rem;
+  color: var(--color-muted);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.screenshot-grid figure {
+  margin: 0;
+}
+
+.screenshot-grid img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.case-article-list h3 {
+  max-width: 40ch;
+}
+
+@media (min-width: 48rem) {
+  .case-summary {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    align-items: start;
+  }
+
+  .case-stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .case-stats div {
+    padding-right: 1rem;
+    border-right: 1px solid var(--color-border);
+    border-bottom: 0;
+  }
+
+  .case-stats div:last-child {
+    border-right: 0;
+  }
+
+  .screenshot-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 70rem) {
+  .case-summary > p {
+    font-size: 1.45rem;
+  }
+
+  .case-stats dt {
+    font-size: 2.4rem;
+  }
+
+  .case-feature-image {
+    margin-block: 3rem 4rem;
+  }
+}
+/* ==========================================================
+   About Page Additions
+   Add to bottom of assets/css/style.css
+   ========================================================== */
+
+.about-hero h1 {
+  max-width: 13ch;
+}
+
+.about-layout {
+  display: grid;
+  gap: 2rem;
+}
+
+.about-copy {
+  max-width: 58rem;
+}
+
+.about-copy p {
+  color: var(--color-ink);
+  font-size: 1.18rem;
+  line-height: 1.7;
+}
+
+.about-principles {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--color-border);
+}
+
+.about-principles li {
+  padding: 1.6rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.about-principles h3 {
+  margin-bottom: 0.5rem;
+}
+
+.about-principles p {
+  max-width: 44rem;
+  color: var(--color-muted);
+}
+
+.about-timeline li {
+  line-height: 1.65;
+}
+
+@media (min-width: 48rem) {
+  .about-layout {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    align-items: start;
+  }
+
+  .about-principles {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    border-top: 0;
+  }
+
+  .about-principles li {
+    padding: 0;
+    border-bottom: 0;
+  }
+}
+
+@media (min-width: 70rem) {
+  .about-copy p {
+    font-size: 1.35rem;
+  }
+}
+
