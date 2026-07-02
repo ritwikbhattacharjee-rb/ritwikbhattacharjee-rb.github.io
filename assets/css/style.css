@@ -1268,3 +1268,768 @@ h3 {
     grid-template-columns: repeat(5, 1fr);
   }
 }
+/* ==========================================================
+   About Page v8.10
+   Paste at the bottom of assets/css/style.css
+   ========================================================== */
+
+.page-about .about-hero {
+  padding-top: 6.5rem;
+  padding-bottom: 5.5rem;
+  background:
+    radial-gradient(circle at 90% 8%, rgba(122, 74, 40, 0.12), transparent 30rem),
+    linear-gradient(135deg, #fffdf9 0%, #f7f3ee 100%);
+  border-bottom: 1px solid var(--line);
+}
+
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.62fr);
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: center;
+}
+
+.about-portrait-card {
+  margin: 0;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  box-shadow: 0 28px 70px rgba(45, 35, 25, 0.1);
+}
+
+.about-portrait-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  height: auto;
+  object-fit: cover;
+  object-position: center top;
+  background: var(--soft);
+}
+
+.about-portrait-card figcaption {
+  padding: 0.95rem 1.1rem 1.1rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+  border-top: 1px solid var(--line);
+}
+
+.about-body-copy p {
+  color: #343434;
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  line-height: 1.75;
+}
+
+.about-principles-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.about-principles-grid article {
+  padding: 1.45rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: 0 18px 45px rgba(45, 35, 25, 0.06);
+}
+
+.about-principles-grid span {
+  display: inline-block;
+  margin-bottom: 0.9rem;
+  color: var(--accent);
+  font-weight: 900;
+}
+
+.about-principles-grid h3 {
+  margin-bottom: 0.6rem;
+}
+
+.about-principles-grid p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.about-timeline-panel,
+.about-quote-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: start;
+}
+
+.about-career-list {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: career;
+}
+
+.about-career-list li {
+  position: relative;
+  padding: 1.25rem 1.25rem 1.25rem 4.25rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  box-shadow: 0 18px 45px rgba(45, 35, 25, 0.05);
+  counter-increment: career;
+}
+
+.about-career-list li::before {
+  content: counter(career, decimal-leading-zero);
+  position: absolute;
+  left: 1.25rem;
+  top: 1.25rem;
+  color: var(--accent);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.about-career-list strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 1.1rem;
+  letter-spacing: -0.03em;
+}
+
+.about-career-list p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.about-quotes {
+  display: grid;
+  gap: 1rem;
+}
+
+.about-quotes blockquote {
+  margin: 0;
+  padding: 1.45rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: 0 18px 45px rgba(45, 35, 25, 0.06);
+}
+
+.about-quotes p {
+  margin: 0;
+  color: #343434;
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  line-height: 1.55;
+}
+
+.page-about .related-work-panel {
+  background:
+    radial-gradient(circle at 100% 0%, rgba(122, 74, 40, 0.08), transparent 22rem),
+    #fff;
+}
+
+@media (max-width: 1000px) {
+  .about-hero-grid,
+  .about-principles-grid,
+  .about-timeline-panel,
+  .about-quote-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-principles-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-portrait-card {
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-about .about-hero {
+    padding-top: 4.5rem;
+    padding-bottom: 4rem;
+  }
+
+  .about-principles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-career-list li {
+    padding-left: 1.25rem;
+    padding-top: 3.25rem;
+  }
+}
+/* ==========================================================
+   About Page v8.11
+   Paste at the bottom of assets/css/style.css
+   Builds on About Page v8.10
+   ========================================================== */
+
+.page-about .about-hero-actions {
+  margin-top: 2rem;
+}
+
+.about-section-note {
+  max-width: 34rem;
+  color: var(--muted);
+}
+
+.about-quotes-detailed {
+  grid-template-columns: 1fr;
+}
+
+.about-quotes-detailed blockquote {
+  position: relative;
+  padding-left: 1.65rem;
+}
+
+.about-quotes-detailed blockquote::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1.45rem;
+  bottom: 1.45rem;
+  width: 4px;
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+.about-quotes-detailed p {
+  font-size: clamp(1rem, 1.55vw, 1.18rem);
+}
+
+.about-related-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.about-related-grid .card {
+  min-height: 100%;
+}
+
+.about-related-grid .card[href*="linkedin"] h3::after,
+.about-related-grid .card[download] h3::after {
+  content: " â†—";
+  font-size: 0.85em;
+}
+
+@media (max-width: 1100px) {
+  .about-related-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .about-related-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-quotes-detailed blockquote {
+    padding-left: 1.3rem;
+  }
+}
+/* ==========================================================
+   About Page v8.12 â€” spacing + arrow fix
+   Paste at the bottom of assets/css/style.css
+   ========================================================== */
+
+/* Fix mojibake arrow issue in About cards */
+.about-related-grid .card[href*="linkedin"] h3::after,
+.about-related-grid .card[download] h3::after {
+  content: none !important;
+}
+
+/* Give the Explore More cards enough space */
+.page-about .related-work-panel {
+  gap: clamp(2rem, 5vw, 4rem);
+}
+
+.page-about .about-related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.page-about .about-related-grid .card {
+  min-width: 0;
+  padding: 1.35rem;
+  border-radius: 22px;
+}
+
+.page-about .about-related-grid .card h3 {
+  margin-bottom: 0.65rem;
+  font-size: clamp(1.05rem, 1.7vw, 1.25rem);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+}
+
+.page-about .about-related-grid .card p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+/* Make the last two cards breathe instead of becoming narrow columns */
+@media (min-width: 1001px) {
+  .page-about .about-related-grid .card:nth-child(4),
+  .page-about .about-related-grid .card:nth-child(5) {
+    grid-column: span 1;
+  }
+}
+
+/* Better tablet/mobile behavior */
+@media (max-width: 1000px) {
+  .page-about .related-work-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .page-about .about-related-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .page-about .about-related-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-about .about-related-grid .card {
+    padding: 1.2rem;
+  }
+}
+/* ==========================================================
+   Resume Page v8.13
+   Paste at the bottom of assets/css/style.css
+   ========================================================== */
+
+.page-resume .resume-hero {
+  padding-top: 6.5rem;
+  padding-bottom: 5.5rem;
+  background:
+    radial-gradient(circle at 88% 10%, rgba(45, 71, 89, 0.12), transparent 30rem),
+    linear-gradient(135deg, #fffdf9 0%, #f7f3ee 100%);
+  border-bottom: 1px solid var(--line);
+}
+
+.resume-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.65fr);
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: start;
+}
+
+.resume-snapshot-card {
+  padding: 1.45rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  box-shadow: 0 28px 70px rgba(45, 35, 25, 0.08);
+}
+
+.resume-snapshot-card dl {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+}
+
+.resume-snapshot-card div {
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.resume-snapshot-card dt {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.resume-snapshot-card dd {
+  margin: 0.25rem 0 0;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.resume-copy p {
+  color: #343434;
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  line-height: 1.75;
+}
+
+.resume-impact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.resume-impact-grid article {
+  padding: 1.45rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: 0 18px 45px rgba(45, 35, 25, 0.06);
+}
+
+.resume-impact-grid span {
+  display: block;
+  margin-bottom: 0.45rem;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+.resume-impact-grid p {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.resume-experience-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.resume-experience-list article {
+  display: grid;
+  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  padding: 1.6rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  box-shadow: 0 18px 45px rgba(45, 35, 25, 0.06);
+}
+
+.resume-role-meta h3 {
+  margin-bottom: 0.5rem;
+}
+
+.resume-role-meta p:last-child {
+  color: var(--muted);
+  margin: 0;
+}
+
+.resume-timeline-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: start;
+}
+
+.resume-timeline {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: resumeTimeline;
+}
+
+.resume-timeline li {
+  position: relative;
+  padding: 1.35rem 1.35rem 1.35rem 5rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: 0 18px 45px rgba(45, 35, 25, 0.05);
+  counter-increment: resumeTimeline;
+}
+
+.resume-timeline li::before {
+  content: counter(resumeTimeline, decimal-leading-zero);
+  position: absolute;
+  left: 1.35rem;
+  top: 1.35rem;
+  color: var(--accent);
+  font-weight: 900;
+  letter-spacing: -0.05em;
+}
+
+.resume-timeline span {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--accent2);
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.resume-timeline strong {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 1.08rem;
+  letter-spacing: -0.03em;
+}
+
+.resume-timeline p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.resume-education-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.resume-education-grid article {
+  padding: 1.35rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  box-shadow: 0 18px 45px rgba(45, 35, 25, 0.05);
+}
+
+.resume-education-grid h3 {
+  margin-bottom: 0.4rem;
+}
+
+.resume-education-grid p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.resume-final-cta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2rem;
+  align-items: center;
+}
+
+.resume-final-cta p {
+  color: var(--muted);
+}
+
+@media (max-width: 1000px) {
+  .resume-hero-grid,
+  .resume-experience-list article,
+  .resume-timeline-section,
+  .resume-final-cta {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-impact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .resume-final-cta .button-row {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-resume .resume-hero {
+    padding-top: 4.5rem;
+    padding-bottom: 4rem;
+  }
+
+  .resume-impact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-timeline li {
+    padding-left: 1.35rem;
+    padding-top: 3.35rem;
+  }
+}
+/* ==========================================================
+   Academic Page v8.15
+   Paste at the bottom of assets/css/style.css
+   ========================================================== */
+
+.page-academic .academic-hero {
+  padding-top: 6.5rem;
+  padding-bottom: 5.5rem;
+  background:
+    radial-gradient(circle at 88% 10%, rgba(45, 71, 89, 0.12), transparent 30rem),
+    linear-gradient(135deg, #fffdf9 0%, #f7f3ee 100%);
+  border-bottom: 1px solid var(--line);
+}
+
+.academic-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(280px, 0.68fr);
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: start;
+}
+
+.academic-snapshot-card {
+  padding: 1.45rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  box-shadow: 0 28px 70px rgba(45, 35, 25, 0.08);
+}
+
+.academic-snapshot-card dl {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+}
+
+.academic-snapshot-card div {
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.academic-snapshot-card dt {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.academic-snapshot-card dd {
+  margin: 0.25rem 0 0;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.academic-copy p {
+  color: #343434;
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  line-height: 1.75;
+}
+
+.academic-education-grid,
+.academic-research-grid,
+.academic-recognition-grid,
+.academic-presentation-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.academic-education-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.academic-research-grid,
+.academic-recognition-grid,
+.academic-presentation-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.academic-publication-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.academic-education-grid article,
+.academic-research-grid article,
+.academic-recognition-grid article,
+.academic-presentation-grid article,
+.academic-publication-list article,
+.academic-card-stack article {
+  padding: 1.45rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: 0 18px 45px rgba(45, 35, 25, 0.06);
+}
+
+.academic-publication-list article {
+  padding: 1.65rem;
+}
+
+.academic-research-grid span {
+  display: inline-block;
+  margin-bottom: 0.9rem;
+  color: var(--accent);
+  font-weight: 900;
+}
+
+.academic-education-grid h3,
+.academic-research-grid h3,
+.academic-recognition-grid h3,
+.academic-presentation-grid h3,
+.academic-publication-list h3,
+.academic-card-stack h3 {
+  margin-bottom: 0.6rem;
+}
+
+.academic-education-grid p,
+.academic-research-grid p,
+.academic-recognition-grid p,
+.academic-presentation-grid p,
+.academic-publication-list p,
+.academic-card-stack p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.academic-two-panel,
+.academic-bridge-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: start;
+}
+
+.academic-card-stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.academic-final-cta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2rem;
+  align-items: center;
+}
+
+.academic-final-cta p {
+  color: var(--muted);
+}
+
+.academic-final-cta .button-row {
+  justify-content: flex-end;
+}
+
+@media (max-width: 1100px) {
+  .academic-research-grid,
+  .academic-recognition-grid,
+  .academic-presentation-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1000px) {
+  .academic-hero-grid,
+  .academic-two-panel,
+  .academic-bridge-panel,
+  .academic-final-cta {
+    grid-template-columns: 1fr;
+  }
+
+  .academic-education-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .academic-final-cta .button-row {
+    justify-content: flex-start;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-academic .academic-hero {
+    padding-top: 4.5rem;
+    padding-bottom: 4rem;
+  }
+
+  .academic-research-grid,
+  .academic-recognition-grid,
+  .academic-presentation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .academic-publication-list article,
+  .academic-education-grid article,
+  .academic-research-grid article,
+  .academic-recognition-grid article,
+  .academic-presentation-grid article,
+  .academic-card-stack article {
+    padding: 1.2rem;
+  }
+}
