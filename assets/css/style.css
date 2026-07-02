@@ -893,3 +893,244 @@ h3 {
     grid-template-columns: 1fr;
   }
 }
+/* ==========================================================
+   Design Portfolio v8.4
+   Paste at the bottom of assets/css/style.css
+   ========================================================== */
+
+.design-hero {
+  background:
+    radial-gradient(circle at 85% 12%, rgba(15, 94, 140, 0.1), transparent 28rem),
+    var(--color-surface);
+}
+
+.design-summary-grid,
+.design-case-layout {
+  display: grid;
+  gap: 2rem;
+  align-items: start;
+}
+
+.design-summary-copy {
+  max-width: 58rem;
+}
+
+.design-summary-copy p {
+  color: var(--color-ink);
+  font-size: 1.18rem;
+  line-height: 1.7;
+}
+
+.design-category-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.design-category-card {
+  display: grid;
+  align-content: space-between;
+  min-height: 18rem;
+  padding: 1.5rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.design-category-card:hover {
+  transform: translateY(-0.2rem);
+  border-color: rgba(17, 17, 17, 0.3);
+  box-shadow: var(--shadow-md);
+}
+
+.design-category-card h3 {
+  margin-bottom: 0.65rem;
+}
+
+.design-category-card p {
+  color: var(--color-muted);
+}
+
+.design-featured {
+  background:
+    radial-gradient(circle at 100% 0%, rgba(15, 94, 140, 0.08), transparent 18rem),
+    var(--color-surface);
+}
+
+.design-asset-note {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 1.5rem;
+  padding: 0.45rem 0.7rem;
+  color: var(--color-accent-strong);
+  background: var(--color-surface-soft);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+@media (min-width: 48rem) {
+  .design-summary-grid,
+  .design-case-layout {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  }
+
+  .design-category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .design-featured {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 70rem) {
+  .design-summary-copy p {
+    font-size: 1.35rem;
+  }
+
+  .design-category-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .design-featured {
+    grid-column: span 2;
+  }
+}
+/* ==========================================================
+   Design Portfolio v8.5
+   Paste at the bottom of assets/css/style.css
+   ========================================================== */
+
+.design-hero {
+  background:
+    radial-gradient(circle at 85% 12%, rgba(15, 94, 140, 0.1), transparent 28rem),
+    var(--color-surface);
+}
+
+.design-summary-grid,
+.design-feature-layout {
+  display: grid;
+  gap: 2rem;
+  align-items: start;
+}
+
+.design-summary-copy {
+  max-width: 58rem;
+}
+
+.design-summary-copy p {
+  color: var(--color-ink);
+  font-size: 1.18rem;
+  line-height: 1.7;
+}
+
+.design-feature-copy {
+  align-self: start;
+}
+
+.design-poster-feature {
+  margin: 0;
+  overflow: hidden;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.design-poster-feature img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.design-poster-feature figcaption,
+.design-gallery-card figcaption {
+  padding: 0.9rem 1rem 1.05rem;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+.design-gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.design-gallery-card {
+  overflow: hidden;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.design-gallery-card:hover {
+  transform: translateY(-0.2rem);
+  border-color: rgba(17, 17, 17, 0.3);
+  box-shadow: var(--shadow-md);
+}
+
+.design-gallery-card figure {
+  margin: 0;
+  background: var(--color-surface-soft);
+}
+
+.design-gallery-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  height: auto;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.design-gallery-card > div {
+  padding: 1.25rem;
+}
+
+.design-gallery-card h3 {
+  margin-bottom: 0.55rem;
+}
+
+.design-gallery-card p {
+  color: var(--color-muted);
+}
+
+.design-gallery-wide img {
+  aspect-ratio: 16 / 9;
+}
+
+@media (min-width: 48rem) {
+  .design-summary-grid,
+  .design-feature-layout {
+    grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
+  }
+
+  .design-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .design-gallery-wide {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 70rem) {
+  .design-summary-copy p {
+    font-size: 1.32rem;
+  }
+
+  .design-gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .design-gallery-wide {
+    grid-column: span 3;
+  }
+}
