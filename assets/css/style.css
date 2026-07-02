@@ -1541,6 +1541,24 @@ h3 {
 }
 
 /* ==========================================================
+   Compatibility variables for newer page packages
+   ========================================================== */
+
+:root {
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-border: var(--line);
+  --color-surface: #fff;
+  --color-surface-soft: var(--soft);
+  --color-accent-strong: var(--accent);
+  --radius-md: 24px;
+  --radius-lg: 30px;
+  --shadow-sm: 0 18px 45px rgba(45, 35, 25, 0.06);
+  --shadow-md: 0 24px 70px rgba(45, 35, 25, 0.08);
+  --transition: 180ms ease;
+}
+
+/* ==========================================================
    About Page v8.10 + v8.11 + v8.12 consolidated
    ========================================================== */
 
@@ -1696,6 +1714,7 @@ h3 {
   background:
     radial-gradient(circle at 100% 0%, rgba(122, 74, 40, 0.08), transparent 22rem),
     #fff;
+  gap: clamp(2rem, 5vw, 4rem);
 }
 
 .page-about .about-hero-actions {
@@ -1736,10 +1755,6 @@ h3 {
   content: none !important;
 }
 
-.page-about .related-work-panel {
-  gap: clamp(2rem, 5vw, 4rem);
-}
-
 .page-about .about-related-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1766,68 +1781,210 @@ h3 {
   line-height: 1.55;
 }
 
-@media (min-width: 1001px) {
-  .page-about .about-related-grid .card:nth-child(4),
-  .page-about .about-related-grid .card:nth-child(5) {
-    grid-column: span 1;
-  }
-}
-
-@media (max-width: 1000px) {
-  .about-hero-grid,
-  .about-principles-grid,
-  .about-timeline-panel,
-  .about-quote-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .about-principles-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .about-portrait-card {
-    max-width: 420px;
-  }
-
-  .page-about .related-work-panel {
-    grid-template-columns: 1fr;
-  }
-
-  .page-about .about-related-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 640px) {
-  .page-about .about-hero {
-    padding-top: 4.5rem;
-    padding-bottom: 4rem;
-  }
-
-  .about-principles-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .about-career-list li {
-    padding-left: 1.25rem;
-    padding-top: 3.25rem;
-  }
-
-  .page-about .about-related-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .page-about .about-related-grid .card {
-    padding: 1.2rem;
-  }
-
-  .about-quotes-detailed blockquote {
-    padding-left: 1.3rem;
-  }
-}
 /* ==========================================================
-   Contact Page v8.16
-   Paste at the bottom of assets/css/style.css
+   Resume Page v8.13
+   ========================================================== */
+
+.page-resume .resume-hero {
+  padding-top: 6.5rem;
+  padding-bottom: 5.5rem;
+  background:
+    radial-gradient(circle at 88% 10%, rgba(45, 71, 89, 0.12), transparent 30rem),
+    linear-gradient(135deg, #fffdf9 0%, #f7f3ee 100%);
+  border-bottom: 1px solid var(--line);
+}
+
+.resume-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.65fr);
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: start;
+}
+
+.resume-snapshot-card {
+  padding: 1.45rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  box-shadow: 0 28px 70px rgba(45, 35, 25, 0.08);
+}
+
+.resume-snapshot-card dl {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+}
+
+.resume-snapshot-card div {
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.resume-snapshot-card dt {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.resume-snapshot-card dd {
+  margin: 0.25rem 0 0;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.resume-copy p {
+  color: #343434;
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  line-height: 1.75;
+}
+
+.resume-impact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.resume-impact-grid article {
+  padding: 1.45rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: 0 18px 45px rgba(45, 35, 25, 0.06);
+}
+
+.resume-impact-grid span {
+  display: block;
+  margin-bottom: 0.45rem;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+.resume-impact-grid p {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.resume-experience-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.resume-experience-list article {
+  display: grid;
+  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  padding: 1.6rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  box-shadow: 0 18px 45px rgba(45, 35, 25, 0.06);
+}
+
+.resume-role-meta h3 {
+  margin-bottom: 0.5rem;
+}
+
+.resume-role-meta p:last-child {
+  color: var(--muted);
+  margin: 0;
+}
+
+.resume-timeline-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: start;
+}
+
+.resume-timeline {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: resumeTimeline;
+}
+
+.resume-timeline li {
+  position: relative;
+  padding: 1.35rem 1.35rem 1.35rem 5rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: 0 18px 45px rgba(45, 35, 25, 0.05);
+  counter-increment: resumeTimeline;
+}
+
+.resume-timeline li::before {
+  content: counter(resumeTimeline, decimal-leading-zero);
+  position: absolute;
+  left: 1.35rem;
+  top: 1.35rem;
+  color: var(--accent);
+  font-weight: 900;
+  letter-spacing: -0.05em;
+}
+
+.resume-timeline span {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--accent2);
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.resume-timeline strong {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 1.08rem;
+  letter-spacing: -0.03em;
+}
+
+.resume-timeline p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.resume-education-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.resume-education-grid article {
+  padding: 1.35rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  box-shadow: 0 18px 45px rgba(45, 35, 25, 0.05);
+}
+
+.resume-education-grid h3 {
+  margin-bottom: 0.4rem;
+}
+
+.resume-education-grid p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.resume-final-cta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2rem;
+  align-items: center;
+}
+
+.resume-final-cta p {
+  color: var(--muted);
+}
+
+/* ==========================================================
+   Contact Page v8.16 + v8.17
    ========================================================== */
 
 .page-contact .contact-hero {
@@ -1941,55 +2098,6 @@ h3 {
   color: var(--muted);
 }
 
-.contact-related-grid {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-}
-
-.contact-related-grid .card {
-  min-height: 100%;
-}
-
-@media (max-width: 1100px) {
-  .contact-related-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 1000px) {
-  .contact-hero-grid,
-  .contact-two-panel {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-card-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .page-contact .related-work-panel {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 640px) {
-  .page-contact .contact-hero {
-    padding-top: 4.5rem;
-    padding-bottom: 4rem;
-  }
-
-  .contact-related-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-card-grid article,
-  .contact-detail-list article {
-    padding: 1.2rem;
-  }
-}
-/* ==========================================================
-   Contact Page v8.17 â€” Explore First spacing fix
-   Paste at the bottom of assets/css/style.css
-   ========================================================== */
-
 .page-contact .related-work-panel {
   gap: clamp(2rem, 5vw, 4rem);
 }
@@ -2020,22 +2128,349 @@ h3 {
   line-height: 1.55;
 }
 
+/* ==========================================================
+   Recognition & Reach Page v8.18
+   ========================================================== */
+
+.page-recognition .recognition-hero {
+  padding-top: 6.5rem;
+  padding-bottom: 5.5rem;
+  background:
+    radial-gradient(circle at 88% 10%, rgba(45, 71, 89, 0.12), transparent 30rem),
+    linear-gradient(135deg, #fffdf9 0%, #f7f3ee 100%);
+  border-bottom: 1px solid var(--line);
+}
+
+.recognition-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.65fr);
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: start;
+}
+
+.recognition-snapshot-card {
+  padding: 1.45rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  box-shadow: 0 28px 70px rgba(45, 35, 25, 0.08);
+}
+
+.recognition-snapshot-card dl {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+}
+
+.recognition-snapshot-card div {
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.recognition-snapshot-card dt {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.recognition-snapshot-card dd {
+  margin: 0.25rem 0 0;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.recognition-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.recognition-metrics-grid article,
+.recognition-card-grid article,
+.recognition-pattern-grid article,
+.recognition-quotes blockquote {
+  padding: 1.45rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: 0 18px 45px rgba(45, 35, 25, 0.06);
+}
+
+.recognition-metrics-grid span {
+  display: block;
+  margin-bottom: 0.45rem;
+  font-size: clamp(2.1rem, 4.5vw, 3.7rem);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+.recognition-metrics-grid p {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 750;
+}
+
+.recognition-two-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: start;
+}
+
+.recognition-ledger {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+}
+
+.recognition-ledger div {
+  padding: 1.35rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  box-shadow: 0 18px 45px rgba(45, 35, 25, 0.05);
+}
+
+.recognition-ledger dt {
+  font-weight: 900;
+  font-size: 1.08rem;
+  letter-spacing: -0.03em;
+}
+
+.recognition-ledger dd {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+}
+
+.recognition-card-grid,
+.recognition-pattern-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.recognition-card-grid h3,
+.recognition-pattern-grid strong {
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+.recognition-card-grid p,
+.recognition-pattern-grid p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.recognition-quotes {
+  display: grid;
+  gap: 1rem;
+}
+
+.recognition-quotes blockquote {
+  position: relative;
+  margin: 0;
+  padding-left: 1.65rem;
+}
+
+.recognition-quotes blockquote::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1.45rem;
+  bottom: 1.45rem;
+  width: 4px;
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+.recognition-quotes p {
+  margin: 0;
+  color: #343434;
+  font-size: clamp(1rem, 1.55vw, 1.18rem);
+  line-height: 1.55;
+}
+
+.page-recognition .recognition-related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.page-recognition .recognition-related-grid .card {
+  min-width: 0;
+  padding: 1.35rem;
+  border-radius: 22px;
+}
+
+.page-recognition .recognition-related-grid .card h3 {
+  margin-bottom: 0.65rem;
+  font-size: clamp(1.05rem, 1.7vw, 1.25rem);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+}
+
+.page-recognition .recognition-related-grid .card p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+/* ==========================================================
+   Consolidated responsive fixes for current root structure
+   ========================================================== */
+
+@media (max-width: 1100px) {
+  .recognition-card-grid,
+  .recognition-pattern-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 1000px) {
-  .page-contact .related-work-panel {
+  .about-hero-grid,
+  .about-principles-grid,
+  .about-timeline-panel,
+  .about-quote-grid,
+  .resume-hero-grid,
+  .resume-experience-list article,
+  .resume-timeline-section,
+  .resume-final-cta,
+  .contact-hero-grid,
+  .contact-two-panel,
+  .recognition-hero-grid,
+  .recognition-two-panel,
+  .page-about .related-work-panel,
+  .page-contact .related-work-panel,
+  .page-recognition .related-work-panel {
     grid-template-columns: 1fr;
   }
 
-  .page-contact .contact-related-grid {
+  .about-principles-grid,
+  .resume-impact-grid,
+  .page-about .about-related-grid,
+  .page-contact .contact-related-grid,
+  .recognition-metrics-grid,
+  .page-recognition .recognition-related-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-portrait-card {
+    max-width: 420px;
+  }
+
+  .contact-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-final-cta .button-row,
+  .academic-final-cta .button-row {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-about .about-hero,
+  .page-resume .resume-hero,
+  .page-contact .contact-hero,
+  .page-recognition .recognition-hero {
+    padding-top: 4.5rem;
+    padding-bottom: 4rem;
+  }
+
+  .about-principles-grid,
+  .page-about .about-related-grid,
+  .resume-impact-grid,
+  .contact-related-grid,
+  .recognition-metrics-grid,
+  .recognition-card-grid,
+  .recognition-pattern-grid,
+  .page-recognition .recognition-related-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-career-list li,
+  .resume-timeline li {
+    padding-left: 1.25rem;
+    padding-top: 3.25rem;
+  }
+
+  .page-about .about-related-grid .card,
+  .page-contact .contact-related-grid .card,
+  .page-recognition .recognition-related-grid .card,
+  .contact-card-grid article,
+  .contact-detail-list article,
+  .recognition-metrics-grid article,
+  .recognition-card-grid article,
+  .recognition-pattern-grid article,
+  .recognition-ledger div,
+  .recognition-quotes blockquote {
+    padding: 1.2rem;
+  }
+
+  .about-quotes-detailed blockquote {
+    padding-left: 1.3rem;
+  }
+}
+/* ==========================================================
+   Homepage Structure Fix v8.21
+   Paste at the bottom of assets/css/style.css
+   ========================================================== */
+
+.home-explore-section {
+  background:
+    radial-gradient(circle at 92% 8%, rgba(122, 74, 40, 0.08), transparent 24rem),
+    var(--paper);
+}
+
+.home-explore-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.home-explore-grid .card {
+  display: block;
+  min-height: 100%;
+  text-decoration: none;
+  padding: 1.45rem;
+}
+
+.home-explore-grid .card span {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.home-explore-grid .card h3 {
+  margin-bottom: 0.65rem;
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+}
+
+.home-explore-grid .card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+@media (max-width: 1000px) {
+  .home-explore-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 640px) {
-  .page-contact .contact-related-grid {
+  .home-explore-grid {
     grid-template-columns: 1fr;
   }
 
-  .page-contact .contact-related-grid .card {
+  .home-explore-grid .card {
     padding: 1.2rem;
   }
 }
