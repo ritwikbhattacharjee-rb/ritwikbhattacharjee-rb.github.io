@@ -585,3 +585,124 @@ h3 {
   }
 }
 
+
+/* v8.11 Sensitive engagement case study additions */
+.sensitive-hero {
+  background: linear-gradient(135deg, #f7f3ee 0%, #fffdf9 55%, #efe5da 100%);
+}
+
+.sensitive-note {
+  margin-top: 1.75rem;
+  padding: 1.25rem;
+  border: 1px solid var(--line, #e8e2da);
+  border-radius: 1.25rem;
+  background: #fff;
+  box-shadow: 0 18px 45px rgba(45, 35, 25, .05);
+}
+
+.sensitive-note strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent, #7a4a28);
+}
+
+.sensitive-note p {
+  margin: 0;
+  color: var(--muted, #5f5f5f);
+}
+
+.process-list-three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.next-project-strip {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2rem;
+  align-items: center;
+}
+
+.next-project-strip h2 {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .process-list-three,
+  .next-project-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .next-project-strip .button-row {
+    margin-top: 0;
+  }
+}
+
+
+/* v8.12 Sensitive workshop case study refinements */
+.case-feature-image {
+  margin-top: 2.5rem;
+  overflow: hidden;
+  border: 1px solid var(--line, #e8e2da);
+  border-radius: 1.75rem;
+  background: #fff;
+  box-shadow: 0 22px 55px rgba(45, 35, 25, .08);
+}
+
+.case-feature-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.case-feature-image figcaption {
+  padding: 0.95rem 1.15rem;
+  color: var(--muted, #5f5f5f);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--line, #e8e2da);
+}
+
+.sensitive-context-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.sensitive-context-grid article {
+  background: #fff;
+  border: 1px solid var(--line, #e8e2da);
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+  box-shadow: 0 18px 45px rgba(45, 35, 25, .05);
+}
+
+.sensitive-context-grid strong {
+  display: block;
+  margin-bottom: .4rem;
+  font-size: 1.15rem;
+  letter-spacing: -.03em;
+}
+
+.sensitive-context-grid p {
+  margin: 0;
+  color: var(--muted, #5f5f5f);
+}
+
+.sensitive-hero .lead {
+  max-width: 900px;
+}
+
+@media (max-width: 900px) {
+  .sensitive-context-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .sensitive-context-grid {
+    grid-template-columns: 1fr;
+  }
+}
